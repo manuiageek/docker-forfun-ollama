@@ -21,14 +21,21 @@ sudo systemctl restart docker
 docker run --rm --gpus all nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia-smi
 dpkg --print-architecture
 
-# CREATE VOLUME in docker
+## CREATE VOLUME in docker
 
 docker volume create ollama_data
 
-# Interesting Ollama models to use with RTX 3070 Graphic Card :
+# SOME ADVICES
+
+## Interesting Ollama models to use with RTX 3070 Graphic Card :
 
 ollama run [insert_your_favorite_model_here]
-qwen2.5-coder:1.5b-instruct-q8_0
-llama3.2:3b-instruct-q8_0
+qwen2.5-coder:1.5b-instruct-q6_K
+llama3.2:3b-instruct-q6_K
 deepseek-r1:8b-llama-distill-q4_K_M
 llama3.1:8b-instruct-q5_K_M
+mistral:7b-instruct-v0.3-q5_K_M
+
+## Visual studio code extension
+
+I suggest : "continue.dev" , very good extension to help you with your development process.
