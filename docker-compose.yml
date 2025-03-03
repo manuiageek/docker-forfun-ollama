@@ -9,6 +9,7 @@ services:
       - ollama_data:/data
     environment:
       - OLLAMA_BACKEND=nvidia
+      - OLLAMA_MODELS=/data/models
     deploy:
       resources:
         reservations:

@@ -27,7 +27,7 @@ docker volume create ollama_data
 
 # Interesting Ollama models to use with RTX 3070 Graphic Card :
 
-ollama pull [insert_your_favorite_model_here]
+ollama run [insert_your_favorite_model_here]
 qwen2.5-coder:1.5b-instruct-q8_0
 llama3.2:3b-instruct-q8_0
 deepseek-r1:8b-llama-distill-q4_K_M
