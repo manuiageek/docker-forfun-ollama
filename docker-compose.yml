@@ -1,5 +1,5 @@
 services:
-  ollama:
+  ollama_gpu:
     image: ollama/ollama:latest
     container_name: ollama
     restart: always
@@ -10,6 +10,11 @@ services:
     environment:
       - OLLAMA_BACKEND=nvidia
       - OLLAMA_MODELS=/data/models
+      - OLLAMA_CONTEXT_LENGTH=3000
+      - OLLAMA_KEEP_ALIVE=0
+      - OLLAMA_MAX_LOADED_MODELS=1
+      - OLLAMA_FLASH_ATTENTION=1
+      - OLLAMA_KV_CACHE_TYPE=q8_0
     deploy:
       resources:
         reservations:
